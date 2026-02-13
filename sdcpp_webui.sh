@@ -43,14 +43,6 @@ if [ ! -x "sd-cli" ] && ! command -v "sd-cli" > /dev/null && \
   exit 1
 fi
 
-if [ ! -d "venv" ]; then
-    echo "Creating virtual environment..."
-    python3 -m venv venv
-fi
-
-echo "Activating virtual environment..."
-source "venv/bin/activate"
-
 if pip freeze | grep -q -F -f requirements.txt; then
     echo "Requirements are satisfied."
 else
