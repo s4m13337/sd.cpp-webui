@@ -255,7 +255,7 @@ def sdcpp_launch(
         )
 
     # Pass the arguments to sdcpp.launch with argument unpacking
-    sdcpp.launch(**launch_args)
+    sdcpp.launch(**launch_args, share=True) # Setting share=True for public access
 
 
 def main():
